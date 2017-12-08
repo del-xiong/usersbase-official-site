@@ -152,7 +152,7 @@
 #contact-us .contact-inner .am-form .am-u-lg-6:nth-child(1),#contact-us .contact-inner .am-form .am-u-lg-6:nth-child(3){padding-left: 0px;}
 #contact-us .contact-inner .am-form-group{margin-bottom: 4rem;}
 #contact-us .contact-inner .am-form-group input,#contact-us .contact-inner .am-form-group textarea{border-color: #f2f2f2;color: #c3c3c3;letter-spacing: 5px;}
-#contact-us .contact-inner p button[type="submit"]{width: 28%;background-color: #2893a0;color: #fff;outline: none;}
+#contact-us .contact-inner p button[type="button"]{width: 28%;background-color: #2893a0;color: #fff;outline: none;}
 #contact-us .contact-inner .hr-or{display: block;width: 100%;height: 1px;background-color: #f2f2f2;position: relative;margin: 80px 0;}
 #contact-us .contact-inner .hr-or span{position: absolute;width: 100px;background: #fff;left: 50%;margin-left: -50px;text-align: center;top: -12px;color: #999999;}
 #contact-us .contact-bottom{margin-bottom: 114px;}

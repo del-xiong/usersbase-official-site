@@ -8,6 +8,17 @@ $(document).ready(function () {
 		directionNav: false,
 		controlNav: true
 	});
+	//用户信息提交
+	$('#send-submit').click(function (){
+		$.ajax({
+			url: 'www.fsdress.com/index.php?route=checkout/cart/edit',
+			type: 'post',
+			data: $('#first-name,#company,#e-mail,#telephone,#more-content'),
+			dataType: 'html',
+			success: function(html) {
+			}
+		});
+	})
 });
 
 //按钮点击平滑滚动到锚点
