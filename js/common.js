@@ -9,7 +9,7 @@ $(document).ready(function () {
 		controlNav: true
 	});
 	//用户信息提交
-	$('#send-submit').click(function (event){
+	$('#send-submit').click(function (){
 		if($('#text-test').validator('isFormValid')){
 			var userText = {
 				subject: '',
@@ -18,11 +18,13 @@ $(document).ready(function () {
 			userText.subject = '姓名:'+$('#first-name').val() + ';公司:' + $('#company').val() + ';邮箱:' + $('#e-mail').val() + ';电话:' +$('#telephone').val()
 			$.ajax({
 				url: 'http://api.fsdress.com/feedback_api.php',
-				type: 'post',
+				type: 'get',
 				data: userText,
-				dataType: 'html',
+				dataType: 'jsonp',
 				success: function(html) {
+					eval("(" + html + ")")
 					if(html = "1"){
+						$('#first-name,#company,#e-mail,#telephone,#more-content').val('')
 						$('.success-submit').show();
 						setTimeout(function (){
 							$('.success-submit').hide();
