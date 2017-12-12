@@ -65,23 +65,27 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	#home-banner .banner-content-one{left: 0;margin-left: 0;}
 	.am-slider-i2 .am-slider-images{height: 100%;}
+	#home-banner .banner-content-two h2, #home-banner .banner-content-three h2, #home-banner .banner-content-four h2{text-align: center;}
 	.am-slider-i2 .am-slider-desc {text-align: center; top: 35%; } 
-	.am-slider-i2 .am-slider-content h2 {font-size: 20px; } 
+	.am-slider-i2 .am-slider-content h2 {font-size: 20px;text-align: center;} 
 	.am-slider-i2 .am-slider-content p {font-size: 14px; } 
 	.am-slider-i2 .am-btn {margin-top: 10px; } 
 	.am-slider-i2 .am-direction-nav, .am-slider-i2 .am-pauseplay {display: none; } 
 }
 @media screen and (max-width: 637px) {
+	#home-banner .banner-content-two p, #home-banner .banner-content-four p,#home-banner .banner-content-three p{margin-top: 12px !important;}
+	#home-banner .banner-content-one a{line-height: 25px !important;}
 	#home-banner .banner-content-one{left: 0;top: 50%;margin-top: -68px;margin-left: 0px;}
-	#home-banner .banner-content-one p{font-size: 20px;}
-	#home-banner .banner-content-one a{font-size: 14px;}
+	#home-banner .banner-content-one p{font-size: 20px;text-align: center;}
+	#home-banner .banner-content-one a{font-size: 14px;text-align: center;}
 	#home-banner .banner-content-one{left: 0;}
 	#home-banner .banner-content-two , #home-banner .banner-content-three,#home-banner .banner-content-four{max-width: 1000px;width: 100%;padding: 0 15px;top: 50%;margin-top: -50px;left: 0;}
 	#home-banner .banner-content-two p , #home-banner .banner-content-three p,#home-banner .banner-content-four p{font-size: 14px;text-align: center;font-family: "Microsoft YaHei";}
 	.am-slider-i2 .am-slider-images{height: 100%;}
 	.am-slider-i2 .am-slider-desc {text-align: center; top: 110px; } 
-	#home-banner .banner-content-two h2 , #home-banner .banner-content-three h2,#home-banner .banner-content-four h2{font-size: 20px; } 
+	#home-banner .banner-content-two h2 , #home-banner .banner-content-three h2,#home-banner .banner-content-four h2{font-size: 20px;text-align: center;} 
 	#home-banner .banner-content-three h2,#home-banner .banner-content-four h2{text-align: center;}
+	.am-slider-i2 .am-slider-content h2 img{margin: 0 auto !important;}
 	.am-slider-i2 .am-btn {margin-top: 10px; } 
 	.am-slider-i2 .am-direction-nav, .am-slider-i2 .am-pauseplay {display: none; }
 	#nav-container .logo img{width: 120px;}
