@@ -160,22 +160,23 @@
   <div id="contact-us" class="am-u-lg-12">
     <div class="contact-inner">
       <a data-am-scrollspy="{animation:'slide-top', delay: 600}"></a>
-      <form class="am-form" data-am-scrollspy="{animation:'slide-bottom', delay: 600}">
+      <form class="am-form" data-am-scrollspy="{animation:'slide-bottom', delay: 600}" id="text-test">
         <div class="am-form-group am-u-lg-6 am-u-sm-12">
-          <input type="email" class="" id="first-name" placeholder="姓名" name="姓名">
+          <input type="text" class="" id="first-name" placeholder="姓名" name="姓名" minlength="3" data-validation-message= "至少填写三个字符"/>
         </div>
         <div class="am-form-group am-u-lg-6 am-u-sm-12">
-          <input type="email" class="" id="company" placeholder="公司" name="公司">
+          <input type="text" class="" id="company" placeholder="公司" name="公司" minlength="3" data-validation-message= "至少填写三个字符" required/>
         </div>
         <div class="am-form-group am-u-lg-6 am-u-sm-12">
-          <input type="email" class="" id="e-mail" placeholder="工作邮箱" name="邮箱">
+          <input type="email" class="" id="e-mail" placeholder="工作邮箱" name="邮箱" data-validation-message= "请输入正确的邮箱地址" required/>
         </div>
         <div class="am-form-group am-u-lg-6 am-u-sm-12">
-          <input type="email" class="" id="telephone" placeholder="联系电话" name="联系电话">
+          <input type="text" class="js-pattern-mobile" id="telephone" placeholder="联系电话" name="联系电话" data-validation-message= "请输入正确的联系方式" required/>
         </div>
         <div class="am-form-group">
-          <textarea class="" rows="5" id="more-content"  placeholder="您的需求或者您想了解的内容" name="了解内容"></textarea>
+          <textarea class="" rows="5" id="more-content"  placeholder="您的需求或者您想了解的内容" name="了解内容" minlength="5" data-validation-message= "至少填写五个字符" required></textarea>
         </div>
+        <p class="success-submit">您的信息提交成功，稍后我们会与您取得联系。</p>
         <p><button type="button" class="am-btn am-center am-radius" id="send-submit">发送</button></p>
       </form>
       <a class="hr-or" data-am-scrollspy="{animation:'slide-bottom', delay: 600}"><span>或者</span></a>

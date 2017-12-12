@@ -9,16 +9,47 @@ $(document).ready(function () {
 		controlNav: true
 	});
 	//用户信息提交
-	// $('#send-submit').click(function (){
-	// 	$.ajax({
-	// 		url: '',
-	// 		type: 'post',
-	// 		data: $('#first-name,#company,#e-mail,#telephone,#more-content'),
-	// 		dataType: 'html',
-	// 		success: function(html) {
-	// 		}
-	// 	});
-	// })
+	$('#send-submit').click(function (event){
+		if($('#text-test').validator('isFormValid')){
+			var userText = {
+				subject: '',
+				text: $('#more-content').val()
+			}
+			userText.subject = '姓名:'+$('#first-name').val() + ';公司:' + $('#company').val() + ';邮箱:' + $('#e-mail').val() + ';电话:' +$('#telephone').val()
+			$.ajax({
+				url: 'http://api.fsdress.com/feedback_api.php',
+				type: 'post',
+				data: userText,
+				dataType: 'html',
+				success: function(html) {
+					if(html = "1"){
+						$('.success-submit').show();
+						setTimeout(function (){
+							$('.success-submit').hide();
+						},4000)
+					}
+				}
+			});
+		}
+	})
+	if ($.AMUI && $.AMUI.validator) {
+    	$.AMUI.validator.patterns.mobile = /^\s*1\d{10}\s*$/;
+  	}
+	$('#text-test').validator({
+	    onValid: function(validity) {
+	    	$(validity.field).closest('.am-form-group').find('.am-alert').hide();
+	    },
+	    onInValid: function(validity) {
+	      var $field = $(validity.field);
+	      var $group = $field.closest('.am-form-group');
+	      var $alert = $group.find('.am-alert');
+	      var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+	      if (!$alert.length) {
+	        $alert = $('<div class="am-alert am-alert-danger"></div>').hide().appendTo($group);
+	      }
+	      $alert.html(msg).show();
+	    }
+  	});
 });
 
 //按钮点击平滑滚动到锚点
